@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vision Insight</title>
+
+    <script src="https://kit.fontawesome.com/b36f7fa918.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Model.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="topbar.css">
+    <link rel="stylesheet" href="tooltip.css">
+  </head>
+
+
+  <body style="height: 100vh;">
+
+
+    <nav class="navbar navbar-light bg-light fixed-top" style="margin: 0px 5px 0px 5px">
+      <a class="navbar-brand brand-name" href="#">Vision Insight</a>
+
+      <div class="head">
+        AI MDM
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="top-container">
+      <div class="topnav">
+        <button type="button"><i class="fas fa-upload"></i>Publish All</button>
+        <button type="button"><i class="far fa-check-circle"></i>Validate All</button>
+        <button id='reload' type="button"><i class="fas fa-sync-alt"></i>Refresh</button>
+        <button id='discard' type="button"><i class="far fa-trash-alt"></i>Discard All</button>
+      </div>
+    </div>
+
+
+
+    <div class="side-contain">
+      <div class="sidenav">
+        <button><i class="fas fa-home"></i></button>
+        <button class="openbtn open" onclick="openNav()"><i class="fas fa-pencil-alt"></i></button>
+        <button><i class="fas fa-stopwatch"></i></button>
+      </div>
+      <div id="mySidebar" class="sidebar wide">
+        <div class="top">
+          <h5>Factory Resources</h5>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><<</a>
+        </div>
+        <div class="filter">
+          <input type="text" placeholder="Filter..">
+        </div>
+        <button class="collapsible">Pipelines</button>
+        <div class="content"><p>Something...</p>
+        </div>
+        <button class="collapsible">Datasets</button>
+        <div class="content"><p>Something...</p>
+        </div>
+        <button class="collapsible">Data Flows</button>
+        <div class="content"><p>Something...</p>
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="model-container">
+
+      <svg>
+      </svg>
+
+      <div id="data-pull" class="dataModel" style="top: 50px; left: 20px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> data pull</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-cleanse" class="dataModel" style="top: 50px; left: 190px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> data cleanse</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-embed1" class="dataModel" style="top: 50px; left: 370px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> data embed</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-dedup" class="dataModel" style="top: 50px; left: 550px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> data dedup</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-lm" class="dataModel" style="top: 200px; left: 550px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> data learning matcher</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-sm" class="dataModel" style="top: 350px; left: 550px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> std mapper</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-jr" class="dataModel" style="top: 500px; left: 550px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> joining and relationship</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-embed2" class="dataModel" style="top: 200px; left: 190px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> data embed</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-merge" class="dataModel" style="top: 50px; left: 750px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> data merge</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-check" class="dataModel" style="top: 200px; left: 750px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> data check</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+      <div id="data-final" class="dataModel" style="top: 400px; left: 850px;">
+        <div class="dragger"></div>
+        <div class="dataInfo">
+          <p><i class="fa fa-database"></i> finalize</p>
+          <span class="rem"><i class="far fa-trash-alt"></i></span>
+          <span><i class="fas fa-code"></i></span>
+          <span><i class="far fa-copy"></i></span>
+          <span><i class="far fa-plus-square"></i></span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src='model.js'></script>
+  </body>
+</html>

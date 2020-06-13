@@ -1,0 +1,133 @@
+.side-contain {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  /* padding: auto; */
+}
+
+.sidenav {
+  height: 60%; /* Full-height: remove this if you want "auto" height */
+  width: auto; /* Set the width of the sidebar */
+  z-index: 1; /* Stay on top */
+  background-color: rgb(236, 235, 245);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* The navigation menu links */
+
+.sidenav button {
+  width: auto;
+  height: auto;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(0, 20, 250, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav button:hover {
+  color: rgba(0, 20, 250, 1);
+}
+
+.sidebar {
+  height: 60%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 60px;
+  background-color: rgb(236, 235, 245);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.wide {
+  width: auto;
+}
+
+.filter {
+  width: 100%;
+}
+
+.filter input {
+  width: 70%;
+  margin-left: 10px;
+}
+
+.sidebar .top {
+  display: flex;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.sidebar .closebtn {
+  top: 0;
+  right: 5px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+
+.sidebar .collapsible {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .active, .collapsible:hover {
+  background-color: rgb(220, 218, 237);
+}
+
+.sidenav .open {
+  background-color: rgb(220, 218, 237);
+}
+
+.sidebar .collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.sidebar .content {
+  padding: 0px 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+
+}
+
+.sidebar .content p {
+  padding: 10px 0px;
+}

@@ -1,0 +1,45 @@
+.top-container {
+  left: 0px;
+  top: 60px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.topnav {
+  width: auto; /* Full-height: remove this if you want "auto" height */
+  height: auto; /* Set the width of the sidebar */
+  /* position: fixed; /* Fixed Sidebar (stay in place on scroll) */ */
+  z-index: 1; /* Stay on top */
+
+  background-image: linear-gradient(rgb(212, 209, 237), rgb(236, 235, 242));
+  padding: 0px 20px 0px 20px;
+  /* overflow-y: hidden; /* Disable horizontal scroll */ */
+
+}
+
+/* The navigation menu links */
+
+.topnav button {
+  width: auto;
+  height: auto;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 18px;
+}
+
+.topnav i {
+  margin: 5px;
+  margin-right: 10px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.topnav button:hover {
+  color: rgba(0, 0, 0, 1);
+}
